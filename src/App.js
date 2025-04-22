@@ -23,9 +23,9 @@ function App() {
       }
     })();
   }, []); // Dependency array ensures this runs only once
-
+   //component that displays the data with nice content
+   
   return <div>
-    //component that displays the data with nice content
     <h1>Data from API</h1>
     <p>the API wanted to say to you:</p> 
     {data}
