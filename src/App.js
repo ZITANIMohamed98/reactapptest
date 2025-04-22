@@ -22,7 +22,7 @@ function App() {
         setData('Error fetching data');
       }
     })();
-  }, []); // Dependency array ensures this runs only once
+  }); // Dependency array ensures this runs only once
 
   return <div>{data}</div>;
 }
