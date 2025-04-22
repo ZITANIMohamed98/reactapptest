@@ -6,7 +6,7 @@ function App() {
   useEffect(() => {
     (async function () {
       try {
-        const response = await fetch(`/api/nothingtrigger?name=Mohammed`);
+        const response = await fetch(`/api/nothingtrigger?name=App%20Service%20Dev%20Team`); // Fetch data from the API endpoint
         const contentType = response.headers.get('Content-Type');
 
         let result;
@@ -22,9 +22,14 @@ function App() {
         setData('Error fetching data');
       }
     })();
-  }); // Dependency array ensures this runs only once
+  }, []); // Dependency array ensures this runs only once
 
-  return <div>{data}</div>;
+  return <div>
+    //component that displays the data with nice content
+    <h1>Data from API</h1>
+    <p>the API wanted to say to you:</p> 
+    {data}
+    </div>;
 }
 
 export default App;
